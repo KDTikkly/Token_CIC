@@ -1,0 +1,382 @@
+{
+	"compiler": {
+		"version": "0.8.24+commit.e11b9ed9"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "spender",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					}
+				],
+				"name": "Approval",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "from",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					}
+				],
+				"name": "Transfer",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "TAX_DENOMINATOR",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "TAX_RATE",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_owner",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "spender",
+						"type": "address"
+					}
+				],
+				"name": "allowance",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "spender",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "approve",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "balanceOf",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "decimals",
+				"outputs": [
+					{
+						"internalType": "uint8",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "name",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "symbol",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "totalSupply",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "transfer",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "from",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "transferFrom",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"allowance(address,address)": {
+					"params": {
+						"_owner": "代币所有者的地址",
+						"spender": "被授权方的地址"
+					},
+					"returns": {
+						"_0": "spender可以从_owner处转账的剩余额度"
+					}
+				},
+				"approve(address,uint256)": {
+					"params": {
+						"amount": "授权的代币额度",
+						"spender": "被授权方的地址"
+					},
+					"returns": {
+						"_0": "成功返回true"
+					}
+				},
+				"balanceOf(address)": {
+					"params": {
+						"account": "要查询余额的地址"
+					},
+					"returns": {
+						"_0": "账户的代币余额"
+					}
+				},
+				"constructor": {
+					"details": "设置合约创建者为owner，并铸造全部代币给owner"
+				},
+				"transfer(address,uint256)": {
+					"params": {
+						"amount": "要转账的代币数量 (包含将被扣除的1%税费)",
+						"to": "代币接收方地址"
+					},
+					"returns": {
+						"_0": "成功返回true"
+					}
+				},
+				"transferFrom(address,address,uint256)": {
+					"params": {
+						"amount": "要转账的代币数量 (包含将被扣除的1%税费)",
+						"from": "代币所有者的地址",
+						"to": "代币接收方的地址"
+					},
+					"returns": {
+						"_0": "成功返回true"
+					}
+				}
+			},
+			"title": "Cicerone",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"allowance(address,address)": {
+					"notice": "查询授权额度"
+				},
+				"approve(address,uint256)": {
+					"notice": "授权spender可以从msg.sender处转账一定数量的代币"
+				},
+				"balanceOf(address)": {
+					"notice": "查询特定地址的代币余额"
+				},
+				"constructor": {
+					"notice": "合约部署时执行一次"
+				},
+				"transfer(address,uint256)": {
+					"notice": "标准转账函数"
+				},
+				"transferFrom(address,address,uint256)": {
+					"notice": "授权转账函数，由被授权方调用"
+				}
+			},
+			"notice": "Cicerone ERC-20代币合约，代币符号为CIC，总供应量10亿，6个小数位，包含1%转账税费。",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"CIC.sol": "Cicerone"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"CIC.sol": {
+			"keccak256": "0xc8cd804c3f5e7c368691658aaadf673b75610b347e123db6274ce9c5535618d0",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://2394e20314feb9e936111774b5b4d2f31c41b166c758e9124c6f6043438968fe",
+				"dweb:/ipfs/QmeoPjqshnKkV9TvQAso8rhVegUTasLc5Ca7qMtRcBccW8"
+			]
+		}
+	},
+	"version": 1
+}
